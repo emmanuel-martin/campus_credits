@@ -618,3 +618,79 @@ main table thead tr th:first-child{
     font-size: 2rem;
    }
   }
+
+  main .add-events{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding:  var(--card--padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    border:1px solid var(--color-dark);
+  }
+  .event-form{
+    width:auto;
+    height:70vh;
+  }
+  form h1{
+    font-size:2rem;
+    background:#0b8793;
+    border-radius:40px;
+    width:25vw;
+    padding:2px;
+    height:7vh;
+    margin-top:10px;
+    margin-left:260px;
+  }
+  .event-form input[type="text"],#eventdate,#eventtype,.option{
+    background:#01291ea1;
+    font-size:1.5rem;
+    padding-bottom:20px;
+    padding:10 0 10 0px;
+    border-radius:30px;
+    padding:20px;
+    color:white;
+    border:2px solid black;
+    width:20vw;
+    margin-bottom:20px;
+  }
+  .event-form input[type="text"]:hover,#eventdate:hover,#eventtype:hover{
+    background:black;
+    color:white;
+    
+  }
+  ::placeholder{
+    color:white;
+  }
+  .event-form input[type="submit"]
+  {
+    font-size:2rem;
+    background:#15E8A9;
+    border-radius:10px;
+    border:1px solid grey;
+    letter-spacing: 3px;
+    color:white;
+    width:100px;
+    margin-top:20px;
+    padding:10px;
+    box-shadow:  #181a1e;
+    cursor:pointer;
+  }
+  .event-form input[type="submit"]:hover
+  {
+color:black;
+background:crimson;
+  }
+  a button{
+    background:#15E8A9;
+    color:white;
+    font-weight: 800;
+    padding:8px;
+    font-size:1.2rem;
+    border-radius:24px 0 24px 0;
+    letter-spacing: 2px;
+    margin-bottom:20px;
+    cursor:pointer;
+    border:3px solid black;
+  }

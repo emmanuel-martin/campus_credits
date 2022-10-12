@@ -1,21 +1,27 @@
 <?php 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "minipro";
-                                    
-$conn = mysqli_connect($host, $user, $pass, $db);
-if(!$conn){echo "connection failed";}
 
-session_start();
-$email = $_SESSION['email'];
+$conn=mysqli_connect("localhost","root","","minipro");
+ 
 
-$get_student_details = "SELECT * FROM student1 WHERE email='$email'";
-$get_student = mysqli_query($conn, $get_student_details);
+if(isset($_POST['submit']))
+{
+    if(!empty($_POST['eventname']) && !empty($_POST['eventdate']))
+    {
+$evname=$_POST['eventname'];
+$evtype=$_POST['eventtype'];
+$evdate=$_POST['eventdate'];
+echo"error";
+$sql="insert into event_details(event_name,event_type,event_date) VALUES('$evname','$evtype','$evdate')";
+$query=mysqli_query($conn,$sql);
 
-$student = mysqli_fetch_array($get_student);
+if($query)
+{
+    echo'<script>alert("Sucessfully Added the Event");window.location="EventsFaculty.php"</script>';
+}
 
-$username = $student['f_name'];
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -93,25 +99,31 @@ $username = $student['f_name'];
                                </div>
                                <div class="profile" style="position:relative;left:320px;bottom:50px;" >
                                 <div class="info">
-                                  <p>hey, <b><?php echo $username; ?></b></p>
-                                  <small class="text-muted">Student</small>
+                                  <p>hey, <b><?php //echo $username; ?>Lumy</b></p>
+                                  <small class="text-muted">Faculty Advisor</small>
                                 </div>
                                 <div class="profile-photo">
                                   <img src="image/pic.jpeg">
                                 </div>
                               </div>
                             </div>
-      <a href="addeventsfac.php"> <button>Add New Event</button></a>
+      
                             <div class="add-events">
 
-            
-             <caption> All Events</caption>
-<table>
-
-</table>
+            <form class="event-form" action="#" method="POST">
+             <h1>Add New  Events</h1><br>
+             <input type="text" name="eventname" id="eventname" placeholder="Enter Event Name"><br>
+             <select name="eventtype" id="eventtype" class="option"><br>
+                <option disabled selected>Choose Event Type</option>
+                <option value="Sports">Sports</option>
+                <option value="Academic">Academic</option>
+                <option value="Arts">Arts</option>
+                <option value="IT Fair">IT Fair</option>
+</select><br>
+             <input type="text" name="eventdate" id="eventdate" placeholder="Enter Event Date" onfocus="(this.type='date')"><br>
+             <input type="submit" value="ADD" name="submit" id="submit">
             </form>
           </div>
-</main>
+          </main>
 </body>
-
 </html>

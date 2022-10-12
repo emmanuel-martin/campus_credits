@@ -42,28 +42,28 @@ $username = $student['f_name'];
             </div>
         </div>
         <div class="sidebar">
-          <a href="#" class="active">
+          <a href="facultydash.php" class="active">
             <span class="material-icons-sharp">grid_view</span>
             <h3>Dashboard</h3>
             </a>
-            <a href="#">
+            <a href="StudProfiles.php">
               <span class="material-icons-sharp">person_outline</span>
               <h3>Profile</h3>
               </a>
-              <a href="./certificate.php">
+              <a href="AnalyFac.php">
                 <span class="material-icons-sharp">insights</span>
                 <h3>Class Analytics</h3>
                 </a>
               
-                <a href="#">
+                <a href="NotifiFac.php">
                   <span class="material-icons-sharp">mail_outline</span>
                   <h3>Messages</h3>
                   </a>
-                  <a href="#">
+                  <a href="reportFaculty.php">
                     <span class="material-icons-sharp">report_gmailerrorred</span>
                     <h3>Reports</h3>
                     </a>
-                    <a href="#">
+                    <a href="studresfaculty.php">
                       <span class="material-icons-sharp">settings</span>
                       <h3>Student Results</h3>
                       </a>

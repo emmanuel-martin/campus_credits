@@ -50,7 +50,7 @@ $username = $student['f_name'];
               <span class="material-icons-sharp">person_outline</span>
               <h3>Profile</h3>
               </a>
-              <a href="AnalyFac.php">
+              <a href="AnalyFac.php" class="active">
                 <span class="material-icons-sharp">insights</span>
                 <h3>Class Analytics</h3>
                 </a>
@@ -63,11 +63,11 @@ $username = $student['f_name'];
                     <span class="material-icons-sharp">report_gmailerrorred</span>
                     <h3>Reports</h3>
                     </a>
-                    <a href="studresfaculty.php">
+                    <a href="studresFaculty.php" >
                       <span class="material-icons-sharp">settings</span>
                       <h3>Student Results</h3>
                       </a>
-                      <a href="EventsFaculty.php" class="active">
+                      <a href="EventsFaculty.php" >
                         <span class="material-icons-sharp">add</span>
                         <h3>Add Events</h3>
                         </a>

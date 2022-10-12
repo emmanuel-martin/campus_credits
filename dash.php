@@ -14,7 +14,7 @@ $get_student_details = "SELECT * FROM student1 WHERE email='$email'";
 $get_student = mysqli_query($conn, $get_student_details);
 
 $student = mysqli_fetch_array($get_student);
-ECHO"HIII";
+
 $username = $student['f_name'];
 ?>
 <!DOCTYPE html>

@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@400;500;600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.484),rgba(0,0,0,0.4)),url(/php/miniproject/css/4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.logo{ 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width:430px;
+    padding: 30px;
+    background: #fff;
+    border: radius 5px;
+    justify-content: center;
+    margin-left: 35%;
+}
+.wrapper header{
+    color: #6990f2;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+.wrapper form{
+    height: 167px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border:2px dashed #6990f2;
+    margin: 30px 0;
+    cursor: pointer;
+}
+form :where(i, p){
+    color: #6990f2;
+}
+form i{
+    font-size: 50px;
+
+}
+form p{
+    font-size: 16px;
+    margin-top: 15px;
+}
+section .row{
+    background:#e9f0ff;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .row i{
+    font-size: 30px;
+    color:#6990f2;
+
+}
+
+
+section .details span{
+    font-size: 14px;  
+}
+.progress-area .row .content{
+    width:100%;
+    margin-left: 15px;
+}
+.progress-area .details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+.progress-area .progress-bar{
+    height: 6px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 30px;
+}
+.progress-bar .progress{
+    height: 100%;
+    width: 0%;
+    background: #6990f2;
+    border-radius: inherit;
+}
+.uploaded-area{
+    max-height: 150px;
+    overflow-y:scroll;
+}
+.uploaded-area::-webkit-scrollbar{
+    width: 0px;
+}
+.uploaded-area .row .content{
+    display: flex;
+    align-items:center;
+}
+.uploaded-area .row .details{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+.uploaded-area .details .size{
+    font-size: 11px;
+    color:#404040;
+}
+.uploaded-area .fa-check{
+    font-size:#6990f2 ;
+    font-size: 16px;
+}
+
+
+.header{
+    height: 60px;
+    width: 100vw;
+}
+.left{float: left;} .right{float: right;}
+
+.logo img{
+    height: 100px;
+    width: 100px;
+}
+#MenuItems{
+    display: flex;
+}
+li{
+    display: block;
+    margin-right: 50px;
+    margin-top: 25px;
+    }
+    li a{
+    text-decoration: none;
+    color: white;
+    font-size:1.3rem;
+    }
+    .control-btns{
+        margin: 50px 50px;
+        text-align: center;
+        border: 2px transparent white;
+        border-radius: 8px;
+        }
+        .controlbtn{
+        margin-right: 10px;
+        height: 50px;
+        width: 100px;
+        background: none;
+        color: white;
+        border: none;
+        font-size: medium;
+        cursor: pointer;
+        }
+        .controlbtn:hover{
+        background: rgba(255, 255, 255, 0.461);
+        display: inline-block;
+        color: black;
+        transition:ease-out .3s;
+        box-shadow:inset 0 0 0 0 black;
+        }
+        
+        .controlbtn-selected{
+        background: white;
+        color: black;
+        height: 50px;
+        width: 100px;
+        border: none;
+        font-size: medium;
+        cursor: pointer;
+        }
+        #login-form{
+        display: flex;
+        justify-content: center;
+        }
+        .text-input{
+        height: 35px;
+        width: 250px;
+        border: 2px solid white;
+        padding: 0px 15px;
+        border-radius: 8px;
+        background: none;
+        color: white;
+        margin: 10px 0px;
+        }
+        .white-btn{
+        display: inline-block;
+        padding: .75rem 1.25rem;
+        border-radius: 10rem;
+        color: #fff;
+        font-size: 1rem;
+        letter-spacing: .5rem;
+        transition: all .3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        }
+        
+        
+        
+        .glow-on-hover {
+            width: 120px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+        
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        
+        .glow-on-hover:active {
+            color: #000
+        }
+        
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+        
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+        
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        

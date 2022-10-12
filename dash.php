@@ -54,11 +54,7 @@ $username = $student['f_name'];
                 <span class="material-icons-sharp">insights</span>
                 <h3>Certificates</h3>
                 </a>
-              <a href="#">
               
-                <span class="material-icons-sharp">insights</span>
-                <h3>Analytics</h3>
-                </a>
                 <a href="#">
                   <span class="material-icons-sharp">mail_outline</span>
                   <h3>Messages</h3>

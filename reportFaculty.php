@@ -79,7 +79,7 @@ $username = $student['f_name'];
           </aside>
           <!------end of aside---->
           <main>
-            <h1>Events</h1>
+            <h1>Reports</h1>
             
                          <div class="right" >
                            <div class="top" >

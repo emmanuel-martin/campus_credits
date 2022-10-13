@@ -100,3 +100,48 @@ $username = $student['f_name'];
                                 </div>
                               </div>
                             </div>
+                            <div class="recent-orders" >
+                            <h2>Student Profiles</h2>
+                            <?php
+$result = mysqli_query($conn,"SELECT * FROM student1");
+if (mysqli_num_rows($result) > 0) {
+?>
+                            <table style="padding: 10px;">
+                            <thead>
+  <tr>
+    <th>Stud_Name</th>
+    <th>Stud_Batch</th>
+    <th>Stud_Div</th>
+    <th>Stud_Rollno</th>
+    <th>Stud_Email</th>
+    <th>Level</th>
+    <th>Action</th>
+  </tr>
+</thead>
+<?php
+
+while($row = mysqli_fetch_array($result)) {
+  $studid=$row['stu_id'];
+?>
+<tr>
+    <td><?php echo"{$row["f_name"]} {$row["l_name"]}"; ?></td>
+    <td><?php echo $row["batch"]; ?></td>
+    <td><?php echo $row["division"]; ?></td>
+    <td><?php echo $row["roll_no"]; ?></td>
+    <td><?php echo $row["email"]; ?></td>
+    <td class="warning"><?php echo $row["level"]; ?></td>
+    <td><?php echo"<a href='deletestud.php?stu_id={$studid}'><span>del</span></a>"?></td>
+    
+</tr>
+<?php
+
+}
+?>
+</table>
+ <?php
+}
+else{
+    echo "No result found";
+}
+?>
+                         </div>

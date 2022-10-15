@@ -106,9 +106,41 @@ $username = $student['faculty_name'];
 
             
              <caption> All Events</caption>
-<table>
-
+             <?php
+$result = mysqli_query($conn,"SELECT * FROM event_details");
+if (mysqli_num_rows($result) > 0) {
+?>
+                            <table style="padding: 10px;">
+                            <thead>
+  <tr>
+    <th>Event Name</th>
+    <th>Event Type</th>
+    <th>Event Date</th>
+    <th>Status</th>
+  </tr>
+</thead>
+<?php
+$i=0;
+while($row = mysqli_fetch_array($result)) {
+?>
+<tr>
+    <td><?php echo $row["event_name"]; ?></td>
+    <td><?php echo $row["event_type"]; ?></td>
+    <td><?php echo $row["event_date"]; ?></td>
+    <td class="warning"><?php echo $row["status"]; ?></td>
+    <td class="primary">Details</td>
+</tr>
+<?php
+$i++;
+}
+?>
 </table>
+ <?php
+}
+else{
+    echo "No result found";
+}
+?>
             </form>
           </div>
 </main>

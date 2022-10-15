@@ -147,6 +147,14 @@ else{
                                 </div>
                               </div>
                             </div>
+                            <?php
+$result = mysqli_query($conn,"SELECT * FROM notifications where status='visible'");
+if (mysqli_num_rows($result) > 0) {?>
+<?php
+
+while($row = mysqli_fetch_array($result)) {
+  
+?>
                            <div class="recent-updates">
                              <h2>Recent update</h2>
                               <div class="updates" style="padding: 20px;">
@@ -155,8 +163,8 @@ else{
                                      <img src="image/cebin.jpeg">
                                    </div>
                                    <div class="message">
-                                      <p><b>Cebin Augustine</b> leads the pegasus gang (volleyBall tournament)</p>
-                                      <small class="text-muted">10 minutes ago</small>
+                                      <p><b><?php echo $row["notifi_text"]; ?></b> <?php echo $row["notifi_des"]; ?></p>
+                                      <small class="text-muted"><?php echo $row["notifi_link"]; ?></small>
                                    </div>
                                   </div>
 
@@ -181,7 +189,8 @@ else{
                               <small class="text-muted">just now</small>
                            </div>
                           </div>
-
+<?php }
+}?>
 <div class="update">
       <div class="profile-photo">
         <img src="image/anantika.jpeg">

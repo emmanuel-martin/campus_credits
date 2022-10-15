@@ -35,26 +35,44 @@ $username = $student['faculty_name'];
       border-radius:10px;
       padding:10px;
       letter-spacing:2px;
+      border:2px solid black;
     }
-    .act-btns2{
+    .act-btns2 span{
       padding:10px;
 
+      border:2px solid black;
       border-radius:10px;
       letter-spacing:2px;
 
       background:yellow;
       color:black;
     }
-    .act-btns:hover{
-      border:2px solid black;
-      border-radius:12px;
+    .act-btns span:hover{
+      
+     background:black;
+     color:white;
+      
     }
-    .act-btns2:hover{
-      border:2px solid black;
+    .act-btns2 span:hover{
+      background:black;
+     color:white;
     }
-    .notifi_table{
+    .notifi_table thead th{
+      
+      text-align:center;
+      margin-left:200px;
+      font-size:1.5rem;
       padding:10px;
+      left:100px;
     }
+    .notifi_table tbody td,thead th{
+font-size:1.2rem;    
+ min-width:5vw;
+
+  }
+  table td{
+    padding-bottom:40px;
+  }
   </style>
   </head>
   <body>
@@ -129,8 +147,8 @@ $username = $student['faculty_name'];
                               </div>
                             </div>
                             <a href="addeventsfac.php"> <button>Add New Notification</button></a>
-                            <div class="notification_table" >
                             <h2>Push the neccessary Notifications</h2>
+                            <div class="notification_table" >
                             <?php
 $result = mysqli_query($conn,"SELECT * FROM notifications");
 if (mysqli_num_rows($result) > 0) {
@@ -163,9 +181,7 @@ while($row = mysqli_fetch_array($result)) {
     <td><?php echo $row["stu_id"]; ?></td>
     <td class="warning"><?php echo $row["status"]; ?></td>
      <td class="act-btns"><?php echo"<a href='updatenoti.php?notifi_id={$notiid}'><span>Visible</span></a>"?></td>
-     <td class="act-btns2"><?php echo"<a href='updatenotihide.php?notifi_id={$notiid}'><span>Hide</span></a>"?></td>
-
-    
+     <td class="act-btns2"><?php echo"<a href='updatenotihide.php?notifi_id={$notiid}'><span>Hide</span></a>"?></td> 
 </tr>
 <?php
 

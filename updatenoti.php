@@ -13,11 +13,4 @@ if($sql)
 mysqli_query($connx,$sql); 
 
 
-$sqltwo = "update notifications set status='Hide' WHERE notifi_id = $id ";
-if($sqltwo)
-{
-    header("location:NotifiFac.php");
-}
-mysqli_query($connx,$sqltwo); 
-
 ?>

@@ -8,14 +8,14 @@ $conn = mysqli_connect($host, $user, $pass, $db);
 if(!$conn){echo "connection failed";}
 
 session_start();
-$email = $_SESSION['email'];
+$email =  $_SESSION['fname'];
 
-$get_student_details = "SELECT * FROM student1 WHERE email='$email'";
-$get_student = mysqli_query($conn, $get_student_details);
+$get_student_details = "SELECT * FROM faculty_details WHERE faculty_id='$email'";
+$get_student = mysqli_query($conn,$get_student_details);
 
 $student = mysqli_fetch_array($get_student);
 
-$username = $student['f_name'];
+$username = $student['faculty_name'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -140,7 +140,7 @@ else{
                                <div class="profile">
                                 <div class="info">
                                   <p>hey, <b><?php echo $username; ?></b></p>
-                                  <small class="text-muted">Student</small>
+                                  <small class="text-muted">Faculty</small>
                                 </div>
                                 <div class="profile-photo">
                                   <img src="image/pic.jpeg">

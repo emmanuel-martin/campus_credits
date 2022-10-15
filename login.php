@@ -9,11 +9,12 @@ $error_message = "";
     $loginsql = "SELECT * FROM student1 WHERE email='$username' AND password='$pass'";
 
     $loginquery = mysqli_query($conn,$loginsql);
-    $logindata = mysqli_num_rows($loginquery);
-    if($logindata==1){
+    
+    if($loginquery){
         $_SESSION['email'] = $username; 
-        header('location: ./dash.php');
-    }else{
+        header('location:dash.php');
+    }
+    else{
         $error_message = "Incorrect Username or Password";
     }
 
@@ -60,8 +61,11 @@ $error_message = "";
     $facsql = "SELECT * FROM faculty_details WHERE faculty_id='$username' AND password='$pass'";
 
     $facquery = mysqli_query($conn,$facsql);
+    $_SESSION['fname']=$username;
     $facdata = mysqli_num_rows($facquery);
     if($facdata==1){
+        header('location:facultydash.php');
+
     }else{
         $error_message = "Incorrect Username or Password";
     }

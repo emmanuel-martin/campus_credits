@@ -8,14 +8,14 @@ $conn = mysqli_connect($host, $user, $pass, $db);
 if(!$conn){echo "connection failed";}
 
 session_start();
-$email = $_SESSION['email'];
+$email =  $_SESSION['fname'];
 
-// $get_student_details = "SELECT * FROM student1 WHERE email='$email'";
-// $get_student = mysqli_query($conn, $get_student_details);
+$get_student_details = "SELECT * FROM faculty_details WHERE faculty_id='$email'";
+$get_student = mysqli_query($conn,$get_student_details);
 
-// $student = mysqli_fetch_array($get_student);
+$student = mysqli_fetch_array($get_student);
 
-// $username = $student['f_name'];
+$username = $student['faculty_name'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,6 +28,34 @@ $email = $_SESSION['email'];
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
   <!---stylesheet-->
   <link rel="stylesheet" href="css/facultydash.css">
+  <style>
+    .act-btns span{
+      background:aqua;
+      color:crimson;
+      border-radius:10px;
+      padding:10px;
+      letter-spacing:2px;
+    }
+    .act-btns2{
+      padding:10px;
+
+      border-radius:10px;
+      letter-spacing:2px;
+
+      background:yellow;
+      color:black;
+    }
+    .act-btns:hover{
+      border:2px solid black;
+      border-radius:12px;
+    }
+    .act-btns2:hover{
+      border:2px solid black;
+    }
+    .notifi_table{
+      padding:10px;
+    }
+  </style>
   </head>
   <body>
     <div class="container">
@@ -71,7 +99,7 @@ $email = $_SESSION['email'];
                         <span class="material-icons-sharp">add</span>
                         <h3>Add Events</h3>
                         </a>
-                        <a href="#">
+                        <a href="login.php">
                           <span class="material-icons-sharp">logout</span>
                           <h3>Logout</h3>
                           </a>
@@ -106,32 +134,36 @@ $email = $_SESSION['email'];
                             <?php
 $result = mysqli_query($conn,"SELECT * FROM notifications");
 if (mysqli_num_rows($result) > 0) {
+  
 ?>
-                            <table style="padding: 10px;">
+                            <table style="padding: 10px;" class="notifi_table">
                             <thead>
   <tr>
-    <th>Stud_Name</th>
-    <th>Stud_Batch</th>
-    <th>Stud_Div</th>
-    <th>Stud_Rollno</th>
-    <th>Stud_Email</th>
-    <th>Level</th>
+    <th>Notif_id</th>
+    <th>Noti_Caption</th>
+    <th>Noti_Desc</th>
+    <th>Noti_Time</th>
+    <th>Stud_id</th>
+    <th>Status</th>
+    <th>Action</th>
+
    
   </tr>
 </thead>
 <?php
 
 while($row = mysqli_fetch_array($result)) {
-  
+  $notiid=$row["notifi_id"];
 ?>
 <tr>
-    <td><?php echo"{$row["f_name"]} {$row["l_name"]}"; ?></td>
-    <td><?php echo $row["batch"]; ?></td>
-    <td><?php echo $row["division"]; ?></td>
-    <td><?php echo $row["roll_no"]; ?></td>
-    <td><?php echo $row["email"]; ?></td>
-    <td class="warning"><?php echo $row["level"]; ?></td>
-   
+    <td><?php echo"{$row["notifi_id"]}"; ?></td>
+    <td><?php echo $row["notifi_text"]; ?></td>
+    <td><?php echo $row["notifi_des"]; ?></td>
+    <td><?php echo $row["notifi_link"]; ?></td>
+    <td><?php echo $row["stu_id"]; ?></td>
+    <td class="warning"><?php echo $row["status"]; ?></td>
+     <td class="act-btns"><?php echo"<a href='updatenoti.php?notifi_id={$notiid}'><span>Visible</span></a>"?></td>
+     <td class="act-btns2"><?php echo"<a href='updatenotihide.php?notifi_id={$notiid}'><span>Hide</span></a>"?></td>
 
     
 </tr>

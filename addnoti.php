@@ -115,8 +115,8 @@ if($query)
             <form class="event-form" action="#" method="POST" enctype="multipart/form-data">
              <h1>Add New Notifications</h1><br>
              <input type="text" name="personname" id="personname" placeholder="Enter Student Name"><br>
-             <br>
              <label for="img">Choose Student Image</label>
+             <br>
              <br>
              <input  type="file" name="uploadimg" id="uploadimg">
              <br>

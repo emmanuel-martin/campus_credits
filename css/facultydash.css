@@ -631,7 +631,7 @@ main table thead tr th:first-child{
   }
   .event-form{
     width:auto;
-    height:70vh;
+    height:auto;
   }
   form h1{
     font-size:2rem;
@@ -640,8 +640,8 @@ main table thead tr th:first-child{
     width:25vw;
     padding:2px;
     height:7vh;
-    margin-top:10px;
-    margin-left:260px;
+    margin-top:20px;
+    margin-left:400px;
   }
   .event-form input[type="text"],#eventdate,#eventtype,.option,input[type="file"]{
     background:#01291ea1;

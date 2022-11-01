@@ -13,12 +13,12 @@ $notitime=$_POST['notitime'];
 $stu_id=$_POST['stu_id'];
 
 
-$sql="insert into event_details(event_name,event_type,event_date) VALUES('$evname','$evtype','$evdate')";
+$sql="insert into `notifications`(`notifi_text`, `notifi_des`, `notifi_link`, `stu_id`) VALUES('$notiname','$notidesc','$notitime','$stu_id')";
 $query=mysqli_query($conn,$sql);
 
 if($query)
 {
-    echo'<script>alert("Sucessfully Added the Event");window.location="EventsFaculty.php"</script>';
+    echo'<script>alert("Sucessfully Added the Event");window.location="NotifiFac.php"</script>';
 }
 
     }
@@ -112,9 +112,13 @@ if($query)
       
                             <div class="add-events">
 
-            <form class="event-form" action="#" method="POST">
+            <form class="event-form" action="#" method="POST" enctype="multipart/form-data">
              <h1>Add New Notifications</h1><br>
-             <input type="text" name="personname" id="personname" placeholder="Enter Person Name"><br>
+             <input type="text" name="personname" id="personname" placeholder="Enter Student Name"><br>
+             <br>
+             <label for="img">Choose Student Image</label>
+             <br>
+             <input  type="file" name="uploadimg" id="uploadimg">
              <br>
              <input type="text" name="notidesc" id="notidesc" placeholder="Enter Desc"><br>
              <input type="text" name="notitime" id="notitime" placeholder="Enter Time Ago"><br>

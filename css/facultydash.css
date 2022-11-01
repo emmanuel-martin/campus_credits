@@ -643,7 +643,7 @@ main table thead tr th:first-child{
     margin-top:10px;
     margin-left:260px;
   }
-  .event-form input[type="text"],#eventdate,#eventtype,.option{
+  .event-form input[type="text"],#eventdate,#eventtype,.option,input[type="file"]{
     background:#01291ea1;
     font-size:1.5rem;
     padding-bottom:20px;
@@ -653,6 +653,17 @@ main table thead tr th:first-child{
     color:white;
     border:2px solid black;
     width:20vw;
+    margin-bottom:20px;
+  }
+  .event-form label{
+    background:#01291ea1;
+    font-size:1.2rem;
+    padding:10 0 10 0px;
+    border-radius:30px;
+    color:white;
+    border:2px solid black;
+    width:18vw;
+    height:2vh;
     margin-bottom:20px;
   }
   .event-form input[type="text"]:hover,#eventdate:hover,#eventtype:hover{

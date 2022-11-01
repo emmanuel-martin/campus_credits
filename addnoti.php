@@ -1,21 +1,29 @@
 <?php 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "minipro";
-                                    
-$conn = mysqli_connect($host, $user, $pass, $db);
-if(!$conn){echo "connection failed";}
 
-session_start();
-$email =  $_SESSION['fname'];
+$conn=mysqli_connect("localhost","root","","minipro");
+ 
 
-$get_student_details = "SELECT * FROM faculty_details WHERE faculty_id='$email'";
-$get_student = mysqli_query($conn,$get_student_details);
+if(isset($_POST['submit']))
+{
+    if(!empty($_POST['personname']) && !empty($_POST['notidesc']))
+    {
+$notiname=$_POST['personname'];
+$notidesc=$_POST['notidesc'];
+$notitime=$_POST['notitime'];
+$stu_id=$_POST['stu_id'];
 
-$student = mysqli_fetch_array($get_student);
 
-$username = $student['faculty_name'];
+$sql="insert into event_details(event_name,event_type,event_date) VALUES('$evname','$evtype','$evdate')";
+$query=mysqli_query($conn,$sql);
+
+if($query)
+{
+    echo'<script>alert("Sucessfully Added the Event");window.location="EventsFaculty.php"</script>';
+}
+
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,57 +31,11 @@ $username = $student['faculty_name'];
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dashboard</title>
+  <title>Add new Notification</title>
   <!---material cdn-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
   <!---stylesheet-->
   <link rel="stylesheet" href="css/facultydash.css">
-  <style>
-    .act-btns span{
-      background:aqua;
-      color:crimson;
-      border-radius:10px;
-      padding:10px;
-      letter-spacing:2px;
-      border:2px solid black;
-    }
-    .act-btns2 span{
-      padding:10px;
-
-      border:2px solid black;
-      border-radius:10px;
-      letter-spacing:2px;
-
-      background:yellow;
-      color:black;
-    }
-    .act-btns span:hover{
-      
-     background:black;
-     color:white;
-      
-    }
-    .act-btns2 span:hover{
-      background:black;
-     color:white;
-    }
-    .notifi_table thead th{
-      
-      text-align:center;
-      margin-left:200px;
-      font-size:1.5rem;
-      padding:10px;
-      left:100px;
-    }
-    .notifi_table tbody td,thead th{
-font-size:1.2rem;    
- min-width:5vw;
-
-  }
-  table td{
-    padding-bottom:40px;
-  }
-  </style>
   </head>
   <body>
     <div class="container">
@@ -101,7 +63,7 @@ font-size:1.2rem;
                 <h3>Class Analytics</h3>
                 </a>
               
-                <a href="NotifiFac.php" class="active">
+                <a href="NotifiFac.php">
                   <span class="material-icons-sharp">mail_outline</span>
                   <h3>Messages</h3>
                   </a>
@@ -109,23 +71,24 @@ font-size:1.2rem;
                     <span class="material-icons-sharp">report_gmailerrorred</span>
                     <h3>Reports</h3>
                     </a>
-                    <a href="studresfaculty.php" >
+                    <a href="studresfaculty.php">
                       <span class="material-icons-sharp">settings</span>
                       <h3>Student Results</h3>
                       </a>
-                      <a href="EventsFaculty.php" >
+                      <a href="EventsFaculty.php" class="active">
                         <span class="material-icons-sharp">add</span>
                         <h3>Add Events</h3>
                         </a>
-                        <a href="login.php">
+                        <a href="#">
                           <span class="material-icons-sharp">logout</span>
                           <h3>Logout</h3>
                           </a>
           </div>
           </aside>
           <!------end of aside---->
+          
           <main>
-            <h1>Push Notifications</h1>
+            <h1>Events</h1>
             
                          <div class="right" >
                            <div class="top" >
@@ -138,60 +101,27 @@ font-size:1.2rem;
                                </div>
                                <div class="profile" style="position:relative;left:320px;bottom:50px;" >
                                 <div class="info">
-                                  <p>hey, <b><?php echo $username; ?></b></p>
-                                  <small class="text-muted">Student</small>
+                                  <p>hey, <b><?php //echo $username; ?>Lumy</b></p>
+                                  <small class="text-muted">Faculty Advisor</small>
                                 </div>
                                 <div class="profile-photo">
                                   <img src="image/pic.jpeg">
                                 </div>
                               </div>
                             </div>
-                            <a href="addnoti.php"> <button>Add New Notification</button></a>
-                            <h2>Push the neccessary Notifications</h2>
-                            <div class="notification_table" >
-                            <?php
-$result = mysqli_query($conn,"SELECT * FROM notifications");
-if (mysqli_num_rows($result) > 0) {
-  
-?>
-                            <table style="padding: 10px;" class="notifi_table">
-                            <thead>
-  <tr>
-    <th>Notif_id</th>
-    <th>Noti_Caption</th>
-    <th>Noti_Desc</th>
-    <th>Noti_Time</th>
-    <th>Stud_id</th>
-    <th>Status</th>
-    <th>Action</th>
+      
+                            <div class="add-events">
 
-   
-  </tr>
-</thead>
-<?php
-
-while($row = mysqli_fetch_array($result)) {
-  $notiid=$row["notifi_id"];
-?>
-<tr>
-    <td><?php echo"{$row["notifi_id"]}"; ?></td>
-    <td><?php echo $row["notifi_text"]; ?></td>
-    <td><?php echo $row["notifi_des"]; ?></td>
-    <td><?php echo $row["notifi_link"]; ?></td>
-    <td><?php echo $row["stu_id"]; ?></td>
-    <td class="warning"><?php echo $row["status"]; ?></td>
-     <td class="act-btns"><?php echo"<a href='updatenoti.php?notifi_id={$notiid}'><span>Visible</span></a>"?></td>
-     <td class="act-btns2"><?php echo"<a href='updatenotihide.php?notifi_id={$notiid}'><span>Hide</span></a>"?></td> 
-</tr>
-<?php
-
-}
-?>
-</table>
- <?php
-}
-else{
-    echo "No result found";
-}
-?>
-                         </div>
+            <form class="event-form" action="#" method="POST">
+             <h1>Add New Notifications</h1><br>
+             <input type="text" name="personname" id="personname" placeholder="Enter Person Name"><br>
+             <br>
+             <input type="text" name="notidesc" id="notidesc" placeholder="Enter Desc"><br>
+             <input type="text" name="notitime" id="notitime" placeholder="Enter Time Ago"><br>
+             <input type="text" name="stu_id" id="stu_id" placeholder="Enter Student Id"><br>
+             <input type="submit" value="ADD" name="submit" id="submit">
+            </form>
+          </div>
+          </main>
+</body>
+</html>

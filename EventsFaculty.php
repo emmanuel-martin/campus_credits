@@ -94,7 +94,7 @@ $username = $student['faculty_name'];
                                <div class="profile" style="position:relative;left:320px;bottom:50px;" >
                                 <div class="info">
                                   <p>hey, <b><?php echo $username; ?></b></p>
-                                  <small class="text-muted">Student</small>
+                                  <small class="text-muted">Faculty</small>
                                 </div>
                                 <div class="profile-photo">
                                   <img src="image/pic.jpeg">
@@ -102,11 +102,13 @@ $username = $student['faculty_name'];
                               </div>
                             </div>
       <a href="addeventsfac.php"> <button>Add New Event</button></a>
-                            <div class="add-events">
+      <div class="add-events"> 
+        <caption> All Events</caption>
 
-            
-             <caption> All Events</caption>
-             <?php
+      </div>
+      <div class="recent-orders" >
+                            <h2>Recent events </h2>
+                            <?php
 $result = mysqli_query($conn,"SELECT * FROM event_details");
 if (mysqli_num_rows($result) > 0) {
 ?>
@@ -141,8 +143,8 @@ else{
     echo "No result found";
 }
 ?>
-            </form>
-          </div>
+                            <a href="#">show all</a>
+                         </div>
 </main>
 </body>
 

@@ -9,11 +9,12 @@ if(isset($_POST['submit']))
     {
 $notiname=$_POST['personname'];
 $notidesc=$_POST['notidesc'];
+$notifi_img = $_FILES['uploadimg']['name'];
 $notitime=$_POST['notitime'];
 $stu_id=$_POST['stu_id'];
 
 
-$sql="insert into `notifications`(`notifi_text`, `notifi_des`, `notifi_link`, `stu_id`) VALUES('$notiname','$notidesc','$notitime','$stu_id')";
+$sql="insert into `notifications`(`notifi_text`, `notifi_des`,notfi_img, `notifi_link`, `stu_id`) VALUES('$notiname','$notidesc','$notifi_img','$notitime','$stu_id')";
 $query=mysqli_query($conn,$sql);
 
 if($query)
@@ -101,8 +102,8 @@ if($query)
                                </div>
                                <div class="profile" style="position:relative;left:320px;bottom:50px;" >
                                 <div class="info">
-                                  <p>hey, <b><?php //echo $username; ?>Lumy</b></p>
-                                  <small class="text-muted">Faculty Advisor</small>
+                                  <p>hey, <b><?php echo $username; ?></b></p>
+                                  <small class="text-muted">Faculty</small>
                                 </div>
                                 <div class="profile-photo">
                                   <img src="image/pic.jpeg">

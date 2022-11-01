@@ -160,8 +160,10 @@ while($row = mysqli_fetch_array($result)) {
                               <div class="updates" style="padding: 20px;">
                                  <div class="update">
                                    <div class="profile-photo">
-                                     <img src="image/cebin.jpeg">
-                                   </div>
+                                    <?php $s=$row["notfi_img"]; ?>
+                                  <?php echo '<img src="'.$s.'" alt="HTML5 Icon" style="width:128px;height:128px">';
+   ?> 
+                                  </div>
                                    <div class="message">
                                       <p><b><?php echo $row["notifi_text"]; ?></b> <?php echo $row["notifi_des"]; ?></p>
                                       <small class="text-muted"><?php echo $row["notifi_link"]; ?></small>
@@ -171,27 +173,6 @@ while($row = mysqli_fetch_array($result)) {
                           
 <?php }
 }?>
-<div class="update">
-      <div class="profile-photo">
-        <img src="image/anantika.jpeg">
-</div>
-<div class="message">
-  <p><b>Anantika Varma</b> has won the library award for 
-  owning the best books collection</p>
-   <small class="text-muted">4 minutes ago</small>
-</div>
-</div>
-
-<div class="update">
-      <div class="profile-photo">
-        <img src="image/preethi.jpeg">
-</div>
-<div class="message">
-  <p><b>preethi</b> has been selected as the Malayali Manka 2022</p>
-   <small class="text-muted">2 weeks ago</small>
-</div>
-</div>
-</div>
 </div>
 
 <div class="sales-analytics">

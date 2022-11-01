@@ -99,8 +99,8 @@ if($query)
                                </div>
                                <div class="profile" style="position:relative;left:320px;bottom:50px;" >
                                 <div class="info">
-                                  <p>hey, <b><?php //echo $username; ?>Lumy</b></p>
-                                  <small class="text-muted">Faculty Advisor</small>
+                                  <p>hey, <b><?php echo $username; ?></b></p>
+                                  <small class="text-muted">Faculty</small>
                                 </div>
                                 <div class="profile-photo">
                                   <img src="image/pic.jpeg">

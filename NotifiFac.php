@@ -139,7 +139,7 @@ font-size:1.2rem;
                                <div class="profile" style="position:relative;left:320px;bottom:50px;" >
                                 <div class="info">
                                   <p>hey, <b><?php echo $username; ?></b></p>
-                                  <small class="text-muted">Student</small>
+                                  <small class="text-muted">Faculty</small>
                                 </div>
                                 <div class="profile-photo">
                                   <img src="image/pic.jpeg">
@@ -159,6 +159,7 @@ if (mysqli_num_rows($result) > 0) {
   <tr>
     <th>Notif_id</th>
     <th>Noti_Caption</th>
+    <th>Noti_img</th>
     <th>Noti_Desc</th>
     <th>Noti_Time</th>
     <th>Stud_id</th>
@@ -172,10 +173,13 @@ if (mysqli_num_rows($result) > 0) {
 
 while($row = mysqli_fetch_array($result)) {
   $notiid=$row["notifi_id"];
+  $img_src=$row["notfi_img"];
 ?>
 <tr>
     <td><?php echo"{$row["notifi_id"]}"; ?></td>
     <td><?php echo $row["notifi_text"]; ?></td>
+    <td><?php echo'<img src="data:image/jpeg;base64,'.base64_encode( $row['notfi_img'] ).'"/>'; ?></td>
+
     <td><?php echo $row["notifi_des"]; ?></td>
     <td><?php echo $row["notifi_link"]; ?></td>
     <td><?php echo $row["stu_id"]; ?></td>

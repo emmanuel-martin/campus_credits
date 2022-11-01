@@ -1,0 +1,317 @@
+.switch-box {
+  position: fixed;
+  bottom: 15px;
+  right: 120px;
+  z-index: 9999;
+}
+
+.switch-box .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: 1.5px solid #FFC837;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch-box .slider::before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-box-shadow: 0 0px 15px #2020203d;
+          box-shadow: 0 0px 15px #2020203d;
+  background: white url("../images/night.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.switch-box .slider.round {
+  border-radius: 34px;
+}
+
+.switch-box .slider.round::before {
+  border-radius: 50%;
+}
+
+.switch-box .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+}
+
+.switch-box .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-box input:checked + .slider {
+  background-color: transparent;
+  border: 1.5px solid #e8aa0e;
+}
+
+.switch-box input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #e8aa0e;
+          box-shadow: 0 0 1px #e8aa0e;
+}
+
+.switch-box input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+          transform: translateX(24px);
+  background: white url("../images/sunny.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6 {
+  color: #ffffff !important;
+}
+
+.theme-dark h3 {
+  color: #ffffff !important;
+}
+
+.theme-dark h3 a {
+  color: #ffffff !important;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.theme-dark h3 a:hover {
+  color: #FFC837 !important;
+}
+
+.theme-dark span {
+  color: #ffffff !important;
+}
+
+.theme-dark p {
+  color: #ffffff !important;
+}
+
+.theme-dark body {
+  background: #1d1d1d;
+  color: #ffffff;
+}
+
+.theme-dark .color-white {
+  color: #000000 !important;
+}
+
+.theme-dark .bg-off-white {
+  background-color: #252525;
+}
+
+.theme-dark .background-shapes {
+  opacity: 0.1;
+}
+
+.theme-dark .bg-maincolor-light {
+  background-color: #252525;
+}
+
+.theme-dark .bg-dark {
+  background-color: #1d1d1d !important;
+  --bs-bg-opacity: unset;
+}
+
+.theme-dark .bg-white {
+  --bs-bg-opacity: unset;
+  background-color: #000000 !important;
+}
+
+.theme-dark .form-group label {
+  color: #ffffff;
+}
+
+.theme-dark .form-control {
+  background-color: #0e0e0e !important;
+  color: #ffffff !important;
+}
+
+.theme-dark .input-group {
+  background-color: #0e0e0e !important;
+}
+
+.theme-dark .input-checkbox label {
+  color: #ffffff;
+}
+
+.theme-dark .nice-select {
+  background-color: #0e0e0e;
+}
+
+.theme-dark .list {
+  background-color: #0e0e0e;
+}
+
+.theme-dark .list .option {
+  color: #ffffff !important;
+}
+
+.theme-dark .option.selected {
+  color: #ffffff;
+  background-color: #FFC837;
+}
+
+.theme-dark .option:hover {
+  color: #ffffff;
+  background-color: #FFC837;
+}
+
+.theme-dark .option.focus {
+  color: #ffffff;
+  background-color: #FFC837;
+}
+
+.theme-dark .option.selected.focus {
+  color: #ffffff;
+  background-color: #FFC837;
+}
+
+.theme-dark ul li {
+  color: #ffffff !important;
+}
+
+.theme-dark .navbar-option-search .input-group, .theme-dark .navbar-option-search .form-control {
+  background-color: transparent !important;
+}
+
+.theme-dark .search-area .input-group, .theme-dark .search-area .form-control {
+  background-color: transparent !important;
+}
+
+.theme-dark .navbar-area .main-nav nav .navbar-nav .nav-item a {
+  color: #ffffff !important;
+}
+
+.theme-dark .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu {
+  background-color: #252525 !important;
+}
+
+.theme-dark .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a {
+  color: #ffffff !important;
+}
+
+.theme-dark .mean-container a.meanmenu-reveal {
+  color: #ffffff !important;
+}
+
+.theme-dark .mean-container a.meanmenu-reveal span {
+  background-color: #ffffff !important;
+}
+
+.theme-dark .mean-container .navbar-nav {
+  background-color: #1d1d1d;
+}
+
+.theme-dark .mean-container .mean-nav .navbar-nav .nav-item a {
+  color: #ffffff;
+}
+
+.theme-dark .mean-container .mean-nav .navbar-nav .nav-item a.active {
+  color: #FFC837 !important;
+}
+
+.theme-dark .mean-container .mean-nav .navbar-nav .nav-item a:hover {
+  color: #FFC837 !important;
+}
+
+.theme-dark .mean-container .mean-nav .navbar-nav .nav-item .dropdown-menu {
+  background-color: #1d1d1d;
+}
+
+.theme-dark .navbar-light .navbar-brand .logo1 {
+  display: none;
+}
+
+.theme-dark .navbar-light .navbar-brand .logo2 {
+  display: inline-block;
+}
+
+.theme-dark .mobile-nav .logo1 {
+  display: none;
+}
+
+.theme-dark .mobile-nav .logo2 {
+  display: inline-block;
+}
+
+.theme-dark .fixed-top-half .main-nav-black::before, .theme-dark .fixed-top-half .mobile-nav-black::before {
+  background-color: #252525;
+}
+
+.theme-dark .news-card-link a {
+  color: #ffffff;
+}
+
+.theme-dark .news-newsletter {
+  background-color: #252525;
+}
+
+.theme-dark .product-list-search .form-group .form-control {
+  background-color: transparent !important;
+}
+
+.theme-dark .page-item:first-child .page-link, .theme-dark .page-item:last-child .page-link {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.theme-dark .page-turn-controller button:last-child {
+  color: #ffffff;
+}
+
+.theme-dark .footer-logo .footer-logo1 {
+  display: none;
+}
+
+.theme-dark .footer-logo .footer-logo2 {
+  display: inline-block;
+}
+
+.theme-dark .social-list li a {
+  color: #ffffff;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.theme-dark .social-list li a:hover {
+  color: #FFC837;
+}
+
+.theme-dark .footer-copyright-text p a {
+  color: #FFC837;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.theme-dark .footer-copyright-text p a:hover {
+  color: #ffffff;
+}
+
+.theme-dark .self-text table thead tr th {
+  color: #ffffff;
+}
+
+.theme-dark .self-text table tbody tr td {
+  color: #ffffff;
+}
+
+.theme-dark .self-text ol li {
+  color: #ffffff;
+}
+/*# sourceMappingURL=theme-dark.css.map */

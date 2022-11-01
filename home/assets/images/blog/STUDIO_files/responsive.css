@@ -1,0 +1,1002 @@
+
+@media (max-width: 1400px) {
+  .vision.admin .commmitee .block .name{
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  .vision.admin .commmitee p{
+    text-align: left !important;
+    max-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+.vision.admin .commmitee{
+    max-width: 800px;
+  }
+  .about-block .content {
+    margin-right: 25px;
+  }
+header .container,
+footer .container {
+max-width: 100%;
+}
+.marian-nav li {
+padding: 0 20px;
+}
+.banner .banner-content {
+max-width: 900px;
+}
+.marian-college .content h2 {
+font-size: 50px;
+}
+.marian-college .content p {
+font-size: 19px;
+margin-bottom: 15px;
+}
+.testi-md-img {
+position: absolute;
+right: -333px;
+top: 59px;
+}
+.testimonials.owl-theme .owl-nav .owl-next{
+right: -50px;
+}
+.testimonials.owl-theme .owl-nav .owl-prev{
+left: 0;
+}
+.about-mile{
+width: 375px;
+}
+.about-mile .block h2{
+font-size: 45px;
+}
+ .life-marian-video .content p{
+ 	max-width: 210px;
+ }
+ .life-marian-video .content p,.life-marian-video .content h2 {
+    font-size: 30px;
+}
+.marian-inner-title .title{
+	font-size: 35px;
+}
+.placement-counter .content p {
+    font-size: 19px;
+    }
+.life-marian-sec .nav-pills .nav-link{
+	padding: 10px 75px 10px 15px;
+}
+.marian-nav li a {
+    font-size: 13px;
+}
+.top-header .top-nav li {
+    padding-left: 20px;
+}
+.top-header .top-nav li a{
+	font-size: 13px;
+}
+.union-gl .nav-pills .nav-link:after{
+	left: 9px;
+}
+}
+@media only screen and (max-width: 1024px){
+	.life-marian-sec .nav-pills .nav-link{
+		font-size: 14px;
+	}
+.testimonials .owl-nav{
+	transform: unset;
+	justify-content: center !important;
+	top:unset;
+	bottom:-125px;
+	transform: translateX(-50%);
+	left:50%;
+}
+.testimonial{
+	padding: 75px 0 150px 0;
+}
+.testi-main-block{
+	margin-left: 0;
+}
+
+}
+@media only screen and (max-width: 992px) {
+	.bom-block{
+		position: relative;
+		top: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		transform: unset;
+		margin: 25px 0;
+	}
+	.about-mile .content{
+		height:200px;
+	}
+	.about-mile .block{
+		height: 100px;
+	}
+	.footer-top p{
+		bottom: 7px;
+	}
+	.f-nav{
+  margin-left: 0;
+}
+.testimonial .content{
+	padding: 15px;
+}
+.testimonial .content p {
+    font-size: 14px;
+    line-height: 19px;
+    }
+footer .socials{
+  margin-right:0;
+}
+
+.marian-sub-nav .submenu {
+		display: none;
+	}
+	.life-marian-video .content h2{
+		padding-bottom: 10px;
+	}
+	.life-marian-video .content p{
+		max-width: unset;
+	}
+	.life-marian-sec .nav-pills .nav-link{
+		padding: 15px 50px 15px 0;
+		font-size: 17px;
+	}
+	.life-marian-sec .nav-pills .nav-link:after{
+		right: 10px;
+	}
+	.life-block p{
+		max-width: unset;
+	}
+	.life-block-img{
+		padding-left: 0;
+	}
+.footer-left ul {
+text-align: right;
+}
+footer h2 {
+font-size: 25px;
+}
+.top-nav {
+justify-content: flex-end !important;
+}
+.mb-nav {
+display: block;
+}
+.md-nav {
+display: none;
+}
+.life-marian-block .block {
+margin: 0;
+}
+.life-marian-block h4 {
+font-size: 20px;
+}
+.life-marian-block h3 {
+font-size: 16px;
+padding: 10px;
+}
+.why-marian .content {
+min-width: 300px;
+height: 660px;
+}
+.why-marian .block {
+height: 730px;
+}
+.banner .block {
+height: 520px;
+}
+header:after {
+display: none;
+}
+.hamburger-menu {
+display: block;
+}
+.marian-nav {
+/* width: 200px; */
+position: fixed;
+top: 0;
+padding: 25px;
+right: -250px;
+height: 100vh;
+width: 250px;
+display: block !important;
+flex-direction: column;
+justify-content: flex-start !important;
+background: #201f22;
+margin: 0;
+z-index: 9999;
+transition: all 0.5s ease;
+}
+.marian-nav li a {
+padding: 10px 0;
+display: block;
+color: #fff;
+}
+.marian-nav.show {
+right: 0;
+}
+.marian-nav li {
+padding: 0;
+}
+.marian-nav li a {
+padding: 15px 0;
+transition: all 0.5s ease;
+}
+.marian-nav li:last-child {
+display: none;
+}
+.search {
+display: block;
+top: 15px;
+position: relative;
+right: 70px;
+}
+.bottom-right {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+header .col-8 {
+margin: 0;
+padding: 0;
+}
+.logo img {
+max-width: 150px;
+padding: 10px 0;
+}
+.testimonials .item{
+justify-content: center;
+}
+.testimonials .item .block{
+max-width: 600px;
+transform: skew(0deg);
+left:0;
+}
+.testimonials .item .block .content{
+transform: skew(0deg);
+padding: 15px;
+}
+.testi-md-img {
+display: none !important;
+}
+.testimonials.owl-theme .owl-nav .owl-prev{
+left:0;
+}
+.mb-testi-img{
+display: block !important;
+max-width: 75px;
+}
+.about-mile {
+width: 100%;
+height: auto;
+top:unset;
+bottom: 50px;
+}
+.about-mile .content{
+display: flex;
+flex-wrap: wrap;
+}
+.about-mile .block {
+width: 50%;
+border-right: 1px solid #ccc;
+}
+.about-mile .block:last-child {
+border-bottom: 1px solid #ccc;
+}
+.about-admin {
+background-position: 51% -210px !important;
+}
+.administration.admin-block .about-admin {
+background-position: center !important;
+}
+.commmitee .block {
+    padding: 0 0 25px 0;
+}
+.vision .ex-commitee{
+	padding-top: 50px;
+}
+.pg-info p{
+	padding-left: 0 !important;
+}
+.pg-research h1{
+	font-size: 35px;
+}
+.graduation-programme h1{
+	margin-left: 0;
+}
+.graduation-nav ul li a {
+    padding: 0 15px;
+    }
+.ug-right{
+	right: unset;
+}
+  
+   .why-marian.ug-info .block{
+   	height: 375px;
+   }
+   .admission-btn a{
+	width: 250px;
+	margin:15px auto;
+}
+.life-marian .splide{
+		padding: 15px;
+	}
+	.gallery a,.gallery .bg {
+    min-height: 250px;
+    height: 250px;
+}
+
+}
+
+@media only screen and (max-width: 767px) {
+	.about-mile{
+		position: relative;
+		top: unset !important;
+		bottom: unset !important;
+	}
+	.about-mile .block{
+		flex-wrap: wrap;
+		height: unset !important;
+	}
+	.about-mile .block p{
+		text-align: left !important;
+	}
+	.footer-top p{
+		font-size: 14px !important;
+	}
+	.snr .graduation-info{
+		position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background: transparent;
+    top: 0 !important;
+    transform: unset;
+    margin-bottom: 25px;
+    height: unset !important;
+    overflow: auto !important;
+	}
+	.snr .graduation-info a{
+		padding:3px 5px;
+		margin:2px;
+		background: #333;
+	}
+	.snr .graduation-info .block p{
+	padding: 0;
+    letter-spacing: 1px !important;
+    font-size: 13px !important;
+}
+	.union-gl .col-md-9 {
+    order: 1 !important;
+}
+	.alumni-banner .carousel-item{
+		height: 250px !important;
+	}
+	.gallery-page{
+		padding: 0;
+	}
+	.gallery a,.gallery .bg {
+    min-height: 175px;
+    height: 175px;
+}
+.gallery a .bg i {
+    font-size: 21px;
+    }
+.reach .content{
+	flex-direction: column;
+	text-align: center;
+}
+.reach .content p{
+ margin-bottom: 25px;
+}
+	.testimonial .content{
+		min-height:300px !important;
+		height: unset !important;
+		border-bottom: unset;
+		padding: 25px 15px;
+	}
+    .kuttikanam p{
+    	line-height: 21px !important;
+    }
+	.testimonial .image{
+		width: 100%;
+		top:0;
+		background-position: top !important;
+		height: 400px;
+	}
+	.about-mile .content{
+		height:unset !important;
+	}
+	.about-mile .block{
+		height: 75px;
+	}
+	.about-mile .content h3 {
+    position: absolute;
+    top: 67px;
+    left: -76px;
+    font-size: 17px;
+}
+	.life-marian .see-more{
+    font-size: 15px;
+    height: unset;
+    padding: 5px 25px 5px 15px;
+    line-height: unset;padding: 5px 20px;
+		font-size: 13px;
+	}
+	 .why-marian .content{
+   	top: unset;
+   	height: unset;
+   	min-height: unset;
+   }
+	.life-marian-block h3{
+		height: 50px;
+	}
+	.video-play-button span{
+		    border-left: 15px solid #fff;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	}
+	.video-play-button:after{
+		width: 45px;
+		height: 45px;
+	}
+	.video-play-button:before{
+		width: 45px;
+		height: 45px;
+	}
+	.program-heading{
+		display: flex;
+		justify-content:center;
+		width: 100%;
+	}
+	.program-heading h3{
+		padding: 7px 50px; 
+		position: relative;
+	}
+	.program-heading h3:after {
+    border-color: #fff transparent;
+    border-style: solid;
+    border-width: 6px 4px 0px 5px;
+    height: 0px;
+    width: 0px;
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.programm-list ul li {
+    /* margin: 0 15px; */
+    display: block;
+    margin: 15px 5px;
+    }
+.programm-list ul {
+    justify-content: center;
+    margin-top: 25px;
+    display: none !important;
+}
+.programm-list ul.active{
+	display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+	.placement-info .nav-tabs .nav-item a{
+		padding: 5px;
+	}
+	.placement-student img{
+		max-width: 100%;
+	}
+	.ex-commitee{
+		padding: 25px 0;
+	}
+	.alumni-content h3 {
+    font-size: 25px;
+}
+.alumni-content p {
+    font-size: 25px;
+    }
+    .marian-inner-title .title {
+    font-size: 30px;
+}
+.ex-commitee h3 {
+    font-size: 30px;
+    }
+	.alumni-welcome{
+		text-align: center;
+		padding: 35px 0;
+	}
+	.pg-gallery .content p {
+    background: #48c4b7;
+    padding: 10px 25px;
+    font-weight: 700;
+    font-size: 25px;
+    /* line-height: 25px; */
+    color: #fff;
+    margin-bottom: 0;
+    align-self: center;
+}
+.pg-gallery .content span {
+    margin-left: 6px;
+    }
+    .pg-gallery .content i {
+    font-size: 25px;
+}
+	.life-marian-sec .tab-content {
+    padding: 15px;
+}
+	.life-marian-sec .nav-pills{
+		display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    padding-bottom: 0;
+    border:unset;
+	}
+	.life-marian-sec .nav-pills .nav-link {
+    padding: 7px 15px;
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+.life-marian-sec .nav-pills .nav-link:after{
+	display: none !important;
+}
+	.life-marian-sec{
+		flex-direction: column;
+	}
+	.pg-research p{
+		padding:5px 0;
+	}
+	.pg-research{
+		padding: 25px 0;
+	}
+	.pg-info h2{
+		margin:25px 0;
+	}
+	.pg-info .info{
+		margin-bottom: 35px;
+	}
+.testimonials .item img {
+bottom: 165px;
+}
+.logo img {
+max-width: 130px;
+}
+.footer-left {
+border: 0;
+}
+.f-bottom {
+display: none;
+}
+.footer-top{
+	justify-content: center;
+}
+.f-logo{
+	max-width:250px;
+	margin:0 auto 15px auto;
+}
+.placement-counter .content h2{
+	font-size: 35px;
+}
+.scholarships ul li{
+	border-right: unset;
+}
+.footer-top p{
+  left:0;
+  bottom: 0;
+  text-align: left;
+  font-size: 13px;
+}
+.placement-counter .content p{
+	font-size: 17px;
+	max-width: 150px;
+    margin:0 auto 15px auto;
+}
+.ic-bottom{
+  margin-bottom: 25px;
+}
+.f-nav{
+	text-align: center !important;
+}
+.why-marian .content {
+height: auto;
+padding: 25px 15px 35px 15px;
+}
+.why-marian .content p{
+padding: 15px 0 25px 0;
+}
+.why-marian .block {
+height: 450px;
+}
+footer {
+text-align: center !important;
+}
+.footer-left ul,
+.footer-right ul {
+text-align: center !important;
+}
+footer .socials {
+justify-content: center !important;
+}
+.footer-left p {
+max-width: 200px;
+margin: auto;
+}
+.life-marian h2 {
+font-size: 28px;
+padding: 0 50px 0 10px;
+}
+
+.life-marian-block .block {
+margin: 15px;
+}
+.why-marian {
+padding: 15px 0 25px 0;
+}
+.collaborations {
+padding: 35px 0 100px 0;
+}
+.collaborations .owl-nav {
+    bottom: 0px;
+    }
+
+.collaborations h1 {
+padding-bottom: 25px;
+}
+.banner .block {
+height: 400px;
+}
+.footer-bottom-mb {
+display: block;
+}
+.testimonials.owl-theme .owl-nav .owl-prev{
+position: absolute;
+top:unset;
+bottom: -70px;
+left:calc(50% - 75px);
+width: 75px;
+height: 75px;
+background-size: 100% !important;
+}
+.testimonials.owl-theme .owl-nav .owl-next{
+position: absolute;
+top:unset;
+right:calc(50% - 75px);
+bottom:-70px;
+width: 75px;
+height: 75px;
+background-size: 100% !important;
+}
+.collaborations .owl-theme .owl-nav .owl-prev{
+position: absolute;
+top:unset;
+left:calc(50% - 75px);
+width: 75px;
+height: 75px;
+background-size: 100% !important;
+}
+.collaborations .owl-theme .owl-nav .owl-next{
+position: absolute;
+top:unset;
+right:calc(50% - 75px);
+width: 75px;
+height: 75px;
+background-size: 100% !important;
+}
+.collabration-slide.owl-theme .owl-nav .owl-prev img{
+	max-width: 50px;
+}
+.collabration-slide.owl-theme .owl-nav .owl-next img{
+	max-width: 50px;
+}
+footer{
+padding: 35px 0 15px 0;
+}
+.about-mile .block {
+    padding:15px;
+}
+.administration{
+	padding-top: 0;
+}
+.kuttikanam{
+	padding: 25px 0;
+}
+.graduation-nav ul li a{
+	line-height: 35px;
+}
+.graduation-programme h1 {
+    font-size: 35px;
+}
+.inner-banner{
+	height: 300px;
+}
+.cordinator{
+	text-align: center;
+}
+.cordinator .col-md-3:nth-child(1){
+	margin-bottom: 25px;
+}
+.inner-banner h1{
+	font-size: 35px;
+}
+.admission-btn a{
+	width: 250px;
+	margin:15px auto;
+}
+.life-block h1{
+	margin-bottom: 15px;
+}
+.life-block p{
+	font-size: 17px;
+}
+}
+@media only screen and (max-width: 600px) {
+	.pg-gallery{
+		height: 250px;
+	}
+	.graduation-programme h1{
+		font-size: 23px;
+	}
+	.pg-research h1 {
+    font-size: 23px;
+    line-height: 30px;
+}
+.pg-gallery .content p, .pg-gallery .content span{
+	padding: 5px;
+	height: 35px;
+    line-height: 25px;
+    font-size: 17px;
+}
+	.graduation-slider .carousel-item{
+		height: 200px;
+	}
+	.alumni-content .carousel-item{
+		height: 300px;
+	}
+	.container-time.left{
+		text-align: unset !important;
+	}
+	.testimonial .content h2{
+		font-size: 21px;
+	}
+	.testimonial .content p {
+    font-size: 13px;
+    line-height: 15px;
+}
+.inner-banner,.panvideo{
+    height: 175px;
+    background-size: cover !important;
+}
+.why-marian.ug-info .block{
+	height: 200px;
+}
+.inner-banner h1{
+	font-size: 25px;
+}
+	.top-header .top-nav li a,.top-header .top-right .help{
+		font-size: 12px;
+		line-height: 23px;
+	}
+	.top-header .top-nav .login-submenu:after {
+    right: 10px !important;
+}
+.top-header .top-right .help{
+padding-right:25px;
+}
+.top-header .top-right .help:after{
+	right: 12px;
+}
+.login-submenu .submenu{
+	width: 125px;
+	left: -45px;
+}
+	.academics-nav ul {
+    flex-direction: column;
+    align-items: center;
+}
+.academics-nav ul li{
+	padding-right: 0;
+	margin-bottom: 15px;
+}
+	.up-event-page .block{
+		margin:0 0 25px 0;
+	}
+	.un-table{
+		padding: 35px 0 0 0;
+	}
+	table tbody td, table tfoot td{
+		height: unset;
+		padding: 10px;
+	}
+	.fees-list li{
+		padding: 10px;
+	}
+	.academics, .careers{
+		padding: 35px 0;
+	}
+	.careers p{
+		padding-bottom: 15px;
+	}
+	.placement-info .tab-content{
+		padding: 25px 15px;
+	}
+	.nav-tabs .nav-item a{
+		font-size: 14px;
+	}
+	.graduation-nav ul{
+		justify-content: center !important;
+	}
+	.about-nav ul li a {
+    font-size: 13px;
+}
+	.about-mile .block h2 {
+    font-size: 25px;
+}
+.about-admin {
+background-position: 51% -150px !important;
+}
+.administration.admin-block .about-admin {
+background-position: center !important;
+}
+.administration.admin-block.about-admin {
+background-position: center !important;
+}
+.nav-tabs .nav-item a{
+	padding: 15px 35px;
+}
+.vision .nav{
+	justify-content: center !important;
+}
+	
+.banner .watch-video img {
+min-width: 125px;
+}
+.banner .block {
+height: 300px;
+}
+.logo img {
+max-width: 120px;
+padding: 17px 0 15px 3px;
+}
+.marian-college .content-block {
+text-align: left;
+}
+.marian-college .content p {
+font-size: 17px;
+}
+.footer-left p {
+max-width: 170px;
+}
+.why-marian .content h1 {
+font-size: 30px;
+}
+.life-marian{
+	padding: 25px 0 50px 0;
+}
+button.splide__arrow.splide__arrow--next,button.splide__arrow.splide__arrow--prev{
+	width: 75px;
+	height: 75px;	
+}
+button.splide__arrow.splide__arrow--next{
+position: absolute;
+right:calc(50% - 70px) !important;
+}
+button.splide__arrow.splide__arrow--prev{
+position: absolute;
+left:calc(50% - 70px) !important;
+}
+.splide__arrows{
+	bottom: -10px;
+}
+.splide__arrow--prev{
+	left:-50px !important;
+}
+.splide__arrow--next{
+	right:-50px !important;
+}
+.owl-carousel .owl-item img{
+	width: 125px !important;
+}
+.testimonial-block .col-md-6:nth-child(1){
+	order:2 !important;
+}
+.testi-main-block{
+	border: unset !important;
+}
+}
+@media only screen and (max-width: 520px) {
+	.bom-block{
+		transform: unset !important;
+		top: unset !important;
+	}
+	.alumni-banner .carousel-item{
+		height: 200px !important;
+	}
+	.gallery a, .gallery .bg{
+    min-height: 125px;
+    height: 125px;
+}
+
+	.life-marian h2 {
+    font-size: 23px !important;
+    padding: 0 15px 0 0;
+}
+	.graduation-info{
+		bottom: unset;
+		top:50%;
+		transform: translateY(-50%);
+	}
+	.graduation-info .block{
+		padding: 7px 7px 7px 15px;
+	}
+	.graduation-info .block i {
+    font-size: 14px;
+}
+.graduation-info .block p {
+    font-size: 11px;
+    }
+.top-header .top-nav li {
+padding-left: 10px;
+}
+.testimonial{
+padding: 35px 0 75px 0;
+}
+.testimonials .owl-nav{
+		bottom:-50px !important;
+	}
+.testimonials .item img {
+bottom: 129px;
+max-width: 75px;
+left: -125px;
+}
+.testimonials.owl-theme .owl-nav .owl-next,.testimonials.owl-theme .owl-nav .owl-prev{
+bottom: -25px;
+}
+top-header .top-nav li {
+padding-left: 12px;
+}
+.top-header .top-right{
+	padding: 7px 5px;
+	height: 35px;
+}
+.hamburger-menu{
+	top: 42px;
+}
+}	
+@media only screen and (max-width: 430px) {
+	.life-marian h2 {
+    font-size: 21px;
+}
+.testimonials .item img {
+bottom: 109px;
+}
+.life-marian h2 {
+font-size: 25px;
+padding: 0 10px 0 0;
+}
+.logo img {
+max-width: 110px;
+padding: 15px 0 17px 3px;
+margin-left: -10px;
+}
+.life-marian-sec .nav-pills .nav-link{
+	padding: 7px 10px;
+    font-size: 14px;
+}
+}
+@media only screen and (max-width: 360px) {
+	.life-marian h2{
+		font-size: 20px !!important;
+	}
+.logo img{
+	max-width: 95px !important;
+	}
+}

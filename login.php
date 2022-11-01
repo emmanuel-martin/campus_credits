@@ -91,7 +91,7 @@ $error_message = "";
             </div>
             <div class="right">
                 <ul id='MenuItems'>
-                    <li><a href='home_1.php'>Home</a></li>
+                    <li><a href='home'>Home</a></li>
                     <li><a href='#'>About Us</a></li>
                     <li><a href='#'>Services</a></li>
                     <li><a href='#'>Contact</a></li>
@@ -168,7 +168,7 @@ $error_message = "";
                    
              
                     <input type='checkbox'class='check-box'><label style="color: white;">I agree to the <a href="t.html">terms and conditions</a></label><br><br>
-                    <button type='submit'name='registerbtn'class='glow-on-hover' value="register">Register
+                    <button type='submit'name='registerbtn' id="registerbtnn" class='glow-on-hover' value="register">Register
                 </form>
             </div>
 

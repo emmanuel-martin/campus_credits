@@ -1,0 +1,191 @@
+// Wait for the DOM to be ready
+$(function() {
+
+    var siteUrl = $('#site_url_path_for_external_js').val();
+
+    $.validator.addMethod(
+        "regex",
+        function (value, element, regexp) {
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        "Please check your input."
+    );
+
+    // start for date
+    jQuery.validator.addMethod("greaterThan", 
+    function(value, element, params) {
+
+        if (!/Invalid|NaN/.test(new Date(value))) {
+            return new Date(value) >= new Date($(params).val());
+        }
+
+        return isNaN(value) && isNaN($(params).val()) 
+            || (Number(value) >= Number($(params).val())); 
+    },'Must be greater than {0}.');
+    //  end
+    
+
+    $("form[name='loginform']").validate({
+        rules: {
+            username: {
+                required: true
+            },
+            password: {
+                required: true
+            }
+        },
+        messages: {
+            username: {
+                required: "Please provide a username"
+            },
+            password: {
+                required: "Please provide a password"
+            }
+        },
+
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
+    
+
+    $("form[name='addVideoUrl']").validate({
+        rules: {
+            video_url: {
+                required: true,
+                url: true
+            }
+        },
+        messages: {
+            video_url: {
+                required: "Please provide a video url",
+                url: "Please enter valid url"
+            }
+        },
+
+        submitHandler: function (form) {
+            submitVideoUrlForm();
+        }
+    });
+    
+
+    $("form[name='addVideoUrlPopup']").validate({
+        rules: {
+            video_url_popup: {
+                required: true,
+                url: true
+            }
+        },
+        messages: {
+            video_url_popup: {
+                required: "Please provide a video url",
+                url: "Please enter valid url"
+            }
+        },
+
+        submitHandler: function (form) {
+            submitVideoUrlPopupForm();
+        }
+    });
+
+
+
+
+    $("form[name='gift_info_form']").validate({
+        rules: {
+            designation: {
+                required: true
+            },
+        },
+        messages: {
+            designation: {
+                required: "Please provide a designation"
+            },
+        },
+
+        submitHandler: function (form) {
+            // form.submit();
+            submitGiftInfo();
+        }
+    });
+
+
+
+    $("form[name='personal_info_form']").validate({
+        rules: {
+            first_name: {
+                required: true
+            },
+            last_name: {
+                required: true
+            },
+            prefered_email: {
+                required: true,
+                email: true
+            },
+            confirm_name: {
+                required: true,
+                email: true,
+                equalTo: "#prefered_email"
+            },
+            country: {
+                required: true
+            },
+            address: {
+                required: true
+            },
+            city: {
+                required: true
+            },
+            state: {
+                required: true
+            },
+            zip: {
+                required: true
+            },
+            phone: {
+                required: true
+            },
+        },
+        messages: {
+            first_name: {
+                required: "Please provide first name"
+            },
+            last_name: {
+                required: "Please provide last name"
+            },
+            prefered_email: {
+                required: "Please provide email"
+            },
+            confirm_name: {
+                required: "Please provide confirm email",
+                equalTo: "Email & Confirm email doesn't match"
+            },
+            country: {
+                required: "Please provide country"
+            },
+            address: {
+                required: "Please provide address"
+            },
+            city: {
+                required: "Please provide city"
+            },
+            state: {
+                required: "Please provide state"
+            },
+            zip: {
+                required: "Please provide zip"
+            },
+            phone: {
+                required: "Please provide phone"
+            },
+        },
+
+        submitHandler: function (form) {
+            // form.submit();
+            submitPersonalInfo();
+        }
+    });
+
+});

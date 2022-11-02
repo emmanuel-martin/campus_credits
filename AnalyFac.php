@@ -18,6 +18,8 @@ $username = $student['faculty_name'];
   <meta http-equiv="X-UA-compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Class Analytics</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
   <!---material cdn-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
   <!---stylesheet-->
@@ -111,11 +113,15 @@ border:2px solid red;
                             <button onclick="myFunction3()">3rd Sem</button>
                             <button onclick="myFunction4()">4th Sem</button>
                             <button onclick="myFunction5()">5th Sem</button>
+
+
+
                             <div class="graphcontents" id="graph1">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <canvas id="myChart" style="min-width:900px;"></canvas>
+
+
+    <canvas id="myChart1" style="min-width:900px;"></canvas>
     
-    <script >
+    <script>
     var xValues = ["A Grade", "B Grade", "C Grade", "D Grade", "E Grade"];
     var yValues = [2, 25, 10, 15,8];
     var barColors = [
@@ -126,7 +132,7 @@ border:2px solid red;
       "#1e7145"
     ];
     
-    new Chart("myChart", {
+    new Chart("myChart1", {
       type: "pie",
       data: {
         labels: xValues,
@@ -138,7 +144,6 @@ border:2px solid red;
       options: {
         title: {
           display: true,
-        
           text: "1st Sem Grade Chart"
         }
       }
@@ -146,8 +151,7 @@ border:2px solid red;
     </script>
       </div>
       <div class="graphcontents" id="graph2">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <canvas id="myChart" style="min-width:900px;"></canvas>
+    <canvas id="myChart2" style="min-width:900px;"></canvas>
     
     <script >
     var xValues = ["A Grade", "B Grade", "C Grade", "D Grade", "E Grade"];
@@ -160,7 +164,7 @@ border:2px solid red;
       "#1e7145"
     ];
     
-    new Chart("myChart", {
+    new Chart("myChart2", {
       type: "pie",
       data: {
         labels: xValues,
@@ -181,8 +185,7 @@ border:2px solid red;
       </div>
 
       <div class="graphcontents" id="graph3">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <canvas id="myChart" style="min-width:900px;"></canvas>
+    <canvas id="myChart3" style="min-width:900px;"></canvas>
     
     <script >
     var xValues = ["A Grade", "B Grade", "C Grade", "D Grade", "E Grade"];
@@ -195,7 +198,7 @@ border:2px solid red;
       "#1e7145"
     ];
     
-    new Chart("myChart", {
+    new Chart("myChart3", {
       type: "pie",
       data: {
         labels: xValues,
@@ -216,8 +219,7 @@ border:2px solid red;
       </div>
 
                             <div class="graphcontents" id="graph4">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <canvas id="myChart" style="min-width:900px;"></canvas>
+    <canvas id="myChart4" style="min-width:900px;"></canvas>
     
     <script >
     var xValues = ["A Grade", "B Grade", "C Grade", "D Grade", "E Grade"];
@@ -230,7 +232,7 @@ border:2px solid red;
       "#1e7145"
     ];
     
-    new Chart("myChart", {
+    new Chart("myChart4", {
       type: "pie",
       data: {
         labels: xValues,
@@ -250,8 +252,7 @@ border:2px solid red;
     </script>
       </div>
       <div class="graphcontents2" id="graph5">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <canvas id="myChart" style="min-width:900px;"></canvas>
+    <canvas id="myChart5" style="min-width:900px;"></canvas>
     
     <script >
     var xValues = ["A Grade", "B Grade", "C Grade", "D Grade", "E Grade"];
@@ -264,7 +265,7 @@ border:2px solid red;
       "#1e7145"
     ];
     
-    new Chart("myChart", {
+    new Chart("myChart5", {
       type: "pie",
       data: {
         labels: xValues,
@@ -285,47 +286,86 @@ border:2px solid red;
 
       </div>
 
-  </body>
-  <script>
+      <script>
+   document.getElementById("myChart1").style.display = "block";
+  document.getElementById("myChart2").style.display = "none";
+  document.getElementById("myChart3").style.display = "none";
+  document.getElementById("myChart4").style.display = "none";
+  document.getElementById("myChart5").style.display = "none";
+    
     function myFunction1() {
-  var x = document.getElementById("graph1");
+  var x = document.getElementById("myChart1");
+  var x2 = document.getElementById("myChart2");
+  var x3 = document.getElementById("myChart3");
+  var x4 = document.getElementById("myChart4");
+  var x5 = document.getElementById("myChart5");
+
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+    x2.style.display = "none";
+    x3.style.display = "none";
+    x4.style.display = "none";
+    x5.style.display = "none";
+
+  } 
 }
 function myFunction2() {
-  var y = document.getElementById("graph2");
+  var y = document.getElementById("myChart2");
+  var x2 = document.getElementById("myChart1");
+  var x3 = document.getElementById("myChart3");
+  var x4 = document.getElementById("myChart4");
+  var x5 = document.getElementById("myChart5");
   if (y.style.display === "none") {
     y.style.display = "block";
-  } else {
-    y.style.display = "none";
-  }
+    x2.style.display = "none";
+    x3.style.display = "none";
+    x4.style.display = "none";
+    x5.style.display = "none";
+  } 
 }
 function myFunction3() {
-  var z = document.getElementById("graph3");
+  var z = document.getElementById("myChart3");
+  var x2 = document.getElementById("myChart1");
+  var x3 = document.getElementById("myChart2");
+  var x4 = document.getElementById("myChart4");
+  var x5 = document.getElementById("myChart5");
   if (z.style.display === "none") {
     z.style.display = "block";
-  } else {
-    z.style.display = "none";
-  }
+    x2.style.display = "none";
+    x3.style.display = "none";
+    x4.style.display = "none";
+    x5.style.display = "none";
+  } 
 }
 function myFunction4() {
-  var d = document.getElementById("graph4");
+  var d = document.getElementById("myChart4");
+  var x2 = document.getElementById("myChart1");
+  var x3 = document.getElementById("myChart2");
+  var x4 = document.getElementById("myChart3");
+  var x5 = document.getElementById("myChart5");
   if (d.style.display === "none") {
     d.style.display = "block";
-  } else {
-    d.style.display = "none";
-  }
+    x2.style.display = "none";
+    x3.style.display = "none";
+    x4.style.display = "none";
+    x5.style.display = "none";
+  } 
 }
 function myFunction5() {
-  var x = document.getElementById("graph5");
+  var x = document.getElementById("myChart5");
+  var x2 = document.getElementById("myChart1");
+  var x3 = document.getElementById("myChart2");
+  var x4 = document.getElementById("myChart3");
+  var x5 = document.getElementById("myChart4");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+    x2.style.display = "none";
+    x3.style.display = "none";
+    x4.style.display = "none";
+    x5.style.display = "none";
+  } 
 }
   </script>
+
+  </body>
   </html>

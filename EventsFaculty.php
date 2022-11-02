@@ -23,7 +23,7 @@ $username = $student['faculty_name'];
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dashboard</title>
+  <title>Events Details</title>
   <!---material cdn-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
   <!---stylesheet-->
@@ -97,7 +97,7 @@ $username = $student['faculty_name'];
                                   <small class="text-muted">Faculty</small>
                                 </div>
                                 <div class="profile-photo">
-                                  <img src="image/pic.jpeg">
+                                  <!img src="image/pic.jpeg">
                                 </div>
                               </div>
                             </div>

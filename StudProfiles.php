@@ -96,7 +96,7 @@ $username = $student['faculty_name'];
                                   <small class="text-muted">Faculty</small>
                                 </div>
                                 <div class="profile-photo">
-                                  <img src="image/pic.jpeg">
+                                  <!img src="image/pic.jpeg">
                                 </div>
                               </div>
                             </div>

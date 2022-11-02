@@ -1,6 +1,14 @@
 <?php 
-
+session_start();
 $conn=mysqli_connect("localhost","root","","minipro");
+$email =  $_SESSION['fname'];
+
+$get_student_details = "SELECT * FROM faculty_details WHERE faculty_id='$email'";
+$get_student = mysqli_query($conn,$get_student_details);
+
+$student = mysqli_fetch_array($get_student);
+
+$username = $student['faculty_name'];
  
 
 if(isset($_POST['submit']))
@@ -29,7 +37,7 @@ if($query)
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dashboard</title>
+  <title>Add New Event</title>
   <!---material cdn-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
   <!---stylesheet-->
@@ -103,7 +111,7 @@ if($query)
                                   <small class="text-muted">Faculty</small>
                                 </div>
                                 <div class="profile-photo">
-                                  <img src="image/pic.jpeg">
+                                  <!img src="image/pic.jpeg">
                                 </div>
                               </div>
                             </div>

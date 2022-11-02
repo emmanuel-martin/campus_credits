@@ -1,6 +1,16 @@
 <?php 
 
 $conn=mysqli_connect("localhost","root","","minipro");
+session_start();
+$conn=mysqli_connect("localhost","root","","minipro");
+$email =  $_SESSION['fname'];
+
+$get_student_details = "SELECT * FROM faculty_details WHERE faculty_id='$email'";
+$get_student = mysqli_query($conn,$get_student_details);
+
+$student = mysqli_fetch_array($get_student);
+
+$username = $student['faculty_name'];
  
 
 if(isset($_POST['submit']))
@@ -106,7 +116,7 @@ if($query)
                                   <small class="text-muted">Faculty</small>
                                 </div>
                                 <div class="profile-photo">
-                                  <img src="image/pic.jpeg">
+                                  <!img src="image/pic.jpeg">
                                 </div>
                               </div>
                             </div>

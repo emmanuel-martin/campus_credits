@@ -94,3 +94,88 @@ $username = $student['faculty_name'];
                                 </div>
                               </div>
                             </div>
+
+                            <div class="container">
+      <h2>HTML TABLE</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Roll No.</th>
+            <th>Name</th>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>Computer Science</th>
+            <th>Social Studies</th>
+            <th>Total</th>
+            <th>Max Marks</th>
+            <th>Grade </th>
+          <tr>  
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Bhasker</td>
+            <td>86</td>
+            <td>77</td>
+            <td>87</td>
+            <td>92</td>
+            <td>95</td>
+            <td>437</td>
+			<td>500</td>
+			<td>A</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>Balwant</td>
+            <td>86</td>
+            <td>77</td>
+            <td>87</td>
+            <td>92</td>
+            <td>95</td>
+            <td>437</td>
+			<td>500</td>
+			<td>A</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>Kailash</td>
+            <td>86</td>
+            <td>77</td>
+            <td>87</td>
+            <td>92</td>
+            <td>95</td>
+            <td>437</td>
+			<td>500</td>
+			<td>A</td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>Nikhil</td>
+            <td>86</td>
+            <td>77</td>
+            <td>87</td>
+            <td>92</td>
+            <td>95</td>
+            <td>437</td>
+			<td>500</td>
+			<td>A</td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td>Shubham</td>
+            <td>86</td>
+            <td>77</td>
+            <td>87</td>
+            <td>92</td>
+            <td>95</td>
+            <td>437</td>
+			<td>500</td>
+			<td>A</td>
+          </tr>
+        </tbody>    
+      </table>
+    </div>
+</main>
+</body>
+</html>

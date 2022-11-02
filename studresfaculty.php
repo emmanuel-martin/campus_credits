@@ -22,6 +22,34 @@ $username = $student['faculty_name'];
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
   <!---stylesheet-->
   <link rel="stylesheet" href="css/facultydash.css">
+  <style>
+    
+.container {
+  width: 800px;
+  height: 440px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+  border-radius: 12px;
+  background-color: #90a4ae;
+  font-family: Lato;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+}
+
+td,
+th {
+  padding: 12px;
+  border: 2px dotted;
+}
+  </style>
   </head>
   <body>
     <div class="container">

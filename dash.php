@@ -205,40 +205,33 @@ else{
                                 </div>
                               </div>
                             </div>
-                           <div class="recent-updates">
-                             <h2>Recent update</h2>
+                            <div class="recent-updates">
+                              <h2>Recent update</h2>
+                            <?php
+$result = mysqli_query($conn,"SELECT * FROM notifications where status='visible'");
+if (mysqli_num_rows($result) > 0) {?>
+<?php
+
+while($row = mysqli_fetch_array($result)) {
+  
+?>
                               <div class="updates" style="padding: 20px;">
                                  <div class="update">
                                    <div class="profile-photo">
-                                     <img src="image/cebin.jpeg">
-                                   </div>
+                                    <?php $s=$row["notfi_img"]; ?>
+                                  <?php echo '<img src="'.$s.'" alt="HTML5 Icon" style="width:128px;height:128px">';
+   ?> 
+                                  </div>
                                    <div class="message">
-                                      <p><b>Cebin Augustine</b> leads the pegasus gang (volleyBall tournament)</p>
-                                      <small class="text-muted">10 minutes ago</small>
+                                      <p><b><?php echo $row["notifi_text"]; ?></b> <?php echo $row["notifi_des"]; ?></p>
+                                      <small class="text-muted"><?php echo $row["notifi_link"]; ?></small>
                                    </div>
                                   </div>
 
-                          <div class="update">
-                             <div class="profile-photo">
-                               <img src="image/paul.jpeg">
-                              </div>
-                          <div class="message">
-                            <p><b>Paul Joseph</b> is the man of the match 
-                                 of today's football Tournament</p>
-                            <small class="text-muted">just now</small>
-                          </div>
-                       </div>
-
-                          <div class="update">
-                            <div class="profile-photo">
-                              <img src="image/nikhil.jpeg">
-                            </div>
-                             <div class="message">
-                             <p><b>Nikhil Sebastian</b> is organizing a flashmob for
-                                Diwali celebrations on 04/10/2022</p>
-                              <small class="text-muted">just now</small>
-                           </div>
-                          </div>
+                          
+<?php }
+}?>
+</div>
 
 <div class="update">
       <div class="profile-photo">

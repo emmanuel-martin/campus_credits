@@ -151,11 +151,11 @@ if (mysqli_num_rows($result) > 0) {
                             <table style="padding: 10px;" class="notifi_table">
                             <thead>
   <tr>
-    <th>Notif_id</th>
-    <th>Noti_Caption</th>
-    <th>Noti_img</th>
-    <th>Noti_Desc</th>
-    <th>Noti_Time</th>
+    <th>id</th>
+    <th>Name</th>
+    <th>Img</th>
+    <th>Description</th>
+    <th>Happening Time</th>
     <th>Stud_id</th>
     <th>Status</th>
     <th>Action</th>

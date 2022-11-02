@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn=mysqli_connect("localhost","root","","minipro");
+include 'config.php';
 
 $file_name= $_FILES['file']['temp_name'];
 $tmp_name=$_FILES['file']['tmp_name'];

@@ -1,6 +1,5 @@
 <?php
-
-$connx=mysqli_connect("localhost","root","","minipro");
+include 'config.php';
 
  
 $id =  $_GET["notifi_id"];
@@ -10,7 +9,7 @@ if($sql)
 {
     header("location:NotifiFac.php");
 }
-mysqli_query($connx,$sql); 
+mysqli_query($conn,$sql); 
 
 
 ?>

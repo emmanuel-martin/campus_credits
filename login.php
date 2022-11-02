@@ -1,5 +1,5 @@
 <?php
- $conn=mysqli_connect("localhost","root","","minipro");
+include 'config.php';
  session_start();
 $error_message = "";
  if(isset($_POST['login'])){

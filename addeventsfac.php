@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$conn=mysqli_connect("localhost","root","","minipro");
+include 'config.php';
 $email =  $_SESSION['fname'];
 
 $get_student_details = "SELECT * FROM faculty_details WHERE faculty_id='$email'";

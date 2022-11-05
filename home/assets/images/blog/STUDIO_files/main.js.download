@@ -1,0 +1,204 @@
+//       $('.hamburger-menu').on('click', function() {
+//   $(this).toggleClass('open');
+//   $('.marian-nav').toggleClass('show');
+// }); 
+
+
+
+//gallery
+
+$('.gallery > div.bg').each(function () {
+  $(this).wrapAll('<a href="" data-fancybox="gallery"></a>');
+});
+
+$('.gallery a').each(function () {
+  var link = $(this).children('.bg').css('background-image');
+  console.log(link);
+  link = link.replace(/(url\(|\)|")/g, '');
+  $(this).attr('href', link);
+});
+
+$("[data-fancybox]").fancybox({
+  loop: true,
+  buttons: [
+    "zoom",
+    "share",
+    "slideShow",
+    "fullScreen",
+    // "download",
+    "thumbs",
+    "close"
+  ]
+});
+
+new Splide('#splide', {
+  type: 'loop',
+  rewind: true,
+  perPage: 3,
+  perMove: 1,
+  autoplay: true,
+  pagination: false,
+  breakpoints: {
+    767: {
+      perPage: 1,
+    }
+  }
+}).mount();
+
+$('.events').owlCarousel({
+  loop: false,
+  autoplayHoverPause: true,
+  autoplay: true,
+  items: 1,
+  nav: false,
+  dots: true,
+  touchDrag: true,
+  mouseDrag: true
+})
+$('.testimonials').owlCarousel({
+  loop: true,
+  autoplayHoverPause: true,
+  autoplay: true,
+  items: 1,
+  nav: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1,
+      loop: true
+    },
+    600: {
+      items: 1,
+      loop: true
+    },
+    1000: {
+      items: 1,
+      loop: true
+    }
+  }
+})
+
+$('.collabration-slide').owlCarousel({
+  loop: true,
+  autoplayHoverPause: true,
+  autoplay: true,
+  items: 5,
+  nav: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1,
+      loop: true
+    },
+    600: {
+      items: 3,
+      loop: true
+    },
+    1000: {
+      items: 5,
+      loop: true
+    }
+  }
+})
+
+
+$('.main-slider').owlCarousel({
+  loop: true,
+  autoplayHoverPause: true,
+  autoplay: true,
+  items:1,
+  nav: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1,
+      loop: true
+    },
+    600: {
+      items: 1,
+      loop: true
+    },
+    1000: {
+      items: 1,
+      loop: true
+    }
+  }
+})
+$("body").delegate(".vision-nav li:nth-child(1)", "click", function () {
+  $("#vision").addClass("active show")
+  $("#mission").removeClass("active")
+  $(".vision ul li:nth-child(1) a").addClass("active")
+  $(".vision ul li:nth-child(2) a").removeClass("active")
+
+});
+$("body").delegate(".vision-nav li:nth-child(2)", "click", function () {
+  $("#mission").addClass("active show")
+  $("#vision").removeClass("active")
+  $(".vision ul li:nth-child(2) a").addClass("active")
+  $(".vision ul li:nth-child(1) a").removeClass("active")
+});
+
+
+//        $("body").delegate(".vision-nav li:nth-child(3)", "click", function() {
+
+
+//      $("#vision").removeClass("show active")
+//     $("#mission").removeClass("show active")
+//     $(".tab-content").addClass("choose")
+//     $(".vision ul").addClass("admin-nav")
+// });
+
+$('.gift-info ul li').on('click', function () {
+  $(this).toggleClass('active').siblings().removeClass('active');
+  // $('.main-menu li.active').removeClass('active');        
+});
+$("body").delegate(".gift-btn", "click", function () {
+  $("#pills-profile-tab").addClass("active")
+  $("#pills-home-tab").removeClass("active")
+  $("#personal-info").addClass("active show")
+  $("#gift").removeClass("active show")
+});
+
+function toggle(id) {
+  a = document.getElementById('toggle_' + id);
+  b = document.getElementById('display_' + id);
+  c = document.getElementById('substring_' + id);
+  if (a.style.display == 'contents') {
+    a.style.display = 'none';
+    b.innerHTML = 'Show More';
+    c.style.display = 'contents';
+  }
+  else {
+    a.style.display = 'contents';
+    b.innerHTML = 'Show Less';
+    c.style.display = 'none';
+  }
+}
+
+$('.program-heading').on('click', function () {
+  $('.programm-list ul').toggleClass('active');
+  // $('.main-menu li.active').removeClass('active');        
+});
+
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 900) {
+        $(".life-marian .heading").addClass("active");
+    } else {
+        $(".life-marian .heading").removeClass("active");
+    }
+});
+
+
+
+$('.event-list').owlCarousel({
+  loop: true,
+  autoplayHoverPause: true,
+  autoplay: true,
+  items: 1,
+  nav: true,
+  touchDrag: true,
+  mouseDrag: true
+})

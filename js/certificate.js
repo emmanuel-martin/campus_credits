@@ -24,7 +24,7 @@ function uploadFile(name){
         let fileTotal = Math.floor((total / 1000));
         let progressHTML = "<li class='row'><i class='fas fa-file-alt'></i><div class='content'>div class='details'><span class='name'>image_01.png uploading</span><span class='percent'>50%</span></div><div class='progress-bar'><div class='progress'></div></div> </div></li>";
         let uploadedHTML =" <li class='row'><div class='content'><li class='fa fa-file-alt'></li> <div class='details'><span class='name'>image_01.png uploaded</span><span class='size'>70 KB</span></div> </div><i class='fas fa-check'></i> </li>";
-
+        
     });
     
  
